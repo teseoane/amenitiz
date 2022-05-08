@@ -11,3 +11,12 @@ class Product(object):
     def get_price_with_discount(self, amount):
         '''Return the price for certain amonunt of products.'''
         raise NotImplementedError
+
+
+class ProductCEO(Product):
+
+    def get_price_with_discount(self, amount):
+        '''Return the price with buy-one-get-one-free discount.'''
+        if amount == 1:
+            return self.price
+        return self.price * (amount // 2 + amount % 2)

@@ -47,3 +47,16 @@ Our check-out can scan items in any order, and because the CEO and COO change th
 | GR1,GR1 |  3.11€ |
 | SR1,SR1,GR1,SR1 |  16.61€ |
 | GR1,CF1,SR1,CF1,CF1 |  30.57€ |
+
+## Project SetUp (Python)
+
+1. Clone the repository:
+    ```bash
+    git clone git@github.com:teseoane/amenitiz.git
+    ```
+2. Create a virtualenv with python >= 3.6 and activate it:
+    ```bash
+    cd amenitiz
+    pyenv virtualenv 3.10.3 amenitiz
+    pyenv activate amenitiz
+    ```

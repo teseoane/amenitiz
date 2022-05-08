@@ -60,3 +60,14 @@ Our check-out can scan items in any order, and because the CEO and COO change th
     pyenv virtualenv 3.10.3 amenitiz
     pyenv activate amenitiz
     ```
+3. Run tests:
+    ```bash
+    python -m unittest tests/*.py
+    ```
+
+## Notes:
+
+There are validations and functionalities to be done but I don't think they are the focus of the exercise, like:
+- Product fields (code, name and price) validatios (not None, not empty, strings and decimals).
+- Cart functionalities like empty cart and remove product.
+- Cart validations like prevent remove products if amount equals 0

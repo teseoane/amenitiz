@@ -33,3 +33,12 @@ class ProductCOO(Product):
         if amount < 3:
             return self.price * amount
         return self.price_with_discount * amount
+
+
+class ProductVP(Product):
+
+    def get_price_with_discount(self, amount):
+        '''If you buy 3 or more the price should drop to 2/3 of the original price.'''
+        if amount < 3:
+            return self.price * amount
+        return round(self.price * 0.75 * amount, 2)

@@ -3,6 +3,7 @@ import unittest
 from core import Product
 from core import ProductCEO
 from core import ProductCOO
+from core import ProductVP
 
 
 class ProductTestCase(unittest.TestCase):
@@ -25,3 +26,11 @@ class ProductTestCase(unittest.TestCase):
         self.assertEqual(product_coo.get_price_with_discount(2), 10)
         self.assertEqual(product_coo.get_price_with_discount(3), 13.5)
         self.assertEqual(product_coo.get_price_with_discount(4), 18)
+
+    def test_product_vp_get_price_with_discount(self):
+        product_coo = ProductVP('CF1', 'Coffee', 11.23)
+        self.assertEqual(product_coo.get_price_with_discount(0), 0)
+        self.assertEqual(product_coo.get_price_with_discount(1), 11.23)
+        self.assertEqual(product_coo.get_price_with_discount(2), 22.46)
+        self.assertEqual(product_coo.get_price_with_discount(3), 25.27)
+        self.assertEqual(product_coo.get_price_with_discount(4), 33.69)

@@ -32,5 +32,5 @@ class ProductTestCase(unittest.TestCase):
         self.assertEqual(product_coo.get_price_with_discount(0), 0)
         self.assertEqual(product_coo.get_price_with_discount(1), 11.23)
         self.assertEqual(product_coo.get_price_with_discount(2), 22.46)
-        self.assertEqual(product_coo.get_price_with_discount(3), 25.27)
-        self.assertEqual(product_coo.get_price_with_discount(4), 33.69)
+        self.assertEqual(product_coo.get_price_with_discount(3), 22.46)
+        self.assertEqual(product_coo.get_price_with_discount(4), 29.95)

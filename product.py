@@ -41,4 +41,4 @@ class ProductVP(Product):
         '''If you buy 3 or more the price should drop to 2/3 of the original price.'''
         if amount < 3:
             return self.price * amount
-        return round(self.price * 0.75 * amount, 2)
+        return round(self.price / 3 * 2 * amount, 2)

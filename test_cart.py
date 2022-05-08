@@ -21,3 +21,23 @@ class CartTestCase(unittest.TestCase):
         self.cart.add(self.product_coo)
         self.assertEqual(self.cart.products[self.product_ceo.code]['amount'], 2)
         self.assertEqual(self.cart.products[self.product_coo.code]['amount'], 1)
+
+    def test_get_total(self):
+        self.cart.add(self.product_ceo)
+        self.cart.add(self.product_ceo)
+        self.assertEqual(self.cart.get_total(), 3.11)
+
+        self.cart = Cart()
+        self.cart.add(self.product_coo)
+        self.cart.add(self.product_coo)
+        self.cart.add(self.product_ceo)
+        self.cart.add(self.product_coo)
+        self.assertEqual(self.cart.get_total(), 16.61)
+
+        self.cart = Cart()
+        self.cart.add(self.product_ceo)
+        self.cart.add(self.product_vp)
+        self.cart.add(self.product_coo)
+        self.cart.add(self.product_vp)
+        self.cart.add(self.product_vp)
+        self.assertEqual(self.cart.get_total(), 30.57)

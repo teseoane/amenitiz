@@ -1,9 +1,9 @@
 import unittest
 
-from core import Product
-from core import ProductCEO
-from core import ProductCOO
-from core import ProductVP
+from product import Product
+from product import ProductCEO
+from product import ProductCOO
+from product import ProductVP
 
 
 class ProductTestCase(unittest.TestCase):

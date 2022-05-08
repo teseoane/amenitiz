@@ -1,4 +1,4 @@
-'''File containing the main classes of the application.'''
+'''File containing the product classes.'''
 
 
 class Product(object):
